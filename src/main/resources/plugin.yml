@@ -4,3 +4,8 @@ main: me.whiood.ultimateparticles.UltimateParticles
 api-version: 1.19
 authors: [ Whiood ]
 description: Plugin for walking particles.
+
+commands:
+  trails:
+    description: Command to turn on/off trails.
+    usage: /<command>
