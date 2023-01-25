@@ -1,0 +1,6 @@
+name: UltimateParticles
+version: '${project.version}'
+main: me.whiood.ultimateparticles.UltimateParticles
+api-version: 1.19
+authors: [ Whiood ]
+description: Plugin for walking particles.
