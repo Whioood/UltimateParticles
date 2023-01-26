@@ -1,5 +1,5 @@
 name: UltimateParticles
-version: '${project.version}'
+version: 1.0.0
 main: me.whiood.ultimateparticles.UltimateParticles
 api-version: 1.19
 authors: [ Whiood ]

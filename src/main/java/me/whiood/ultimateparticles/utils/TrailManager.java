@@ -1,39 +1,23 @@
 package me.whiood.ultimateparticles.utils;
 
-import java.util.ArrayList;
-import java.util.List;
+import me.whiood.ultimateparticles.UltimateParticles;
+import org.bukkit.Particle;
+
+import java.util.UUID;
 
 public class TrailManager {
 
-    FileManager fileManager;
-    List<TrailData> trailData;
-
-    public TrailManager(){
-        trailData = new ArrayList<>();
-        fileManager = new FileManager();
-        LoadTrails();
+    public static void setTrail(UUID playerUUID, Particle trail){
+        removeTrail(playerUUID);
+        UltimateParticles.instance.trailMap.put(playerUUID, trail);
     }
 
-    public void LoadTrails(){
-        trailData = fileManager.loadTrailData();
+    public static Particle getTrail(UUID playerUUID){
+        return UltimateParticles.instance.trailMap.get(playerUUID);
     }
 
-    public void SaveTrails(){
-        fileManager.saveTrailData(trailData);
+    public static void removeTrail(UUID playerUUID) {
+        UltimateParticles.instance.trailMap.remove(playerUUID);
     }
 
-    public void DeleteTrail(TrailData trailData){
-        this.trailData.remove(trailData);
-    }
-
-    public void AddTrail(TrailData trailData){
-        for (TrailData data: this.trailData)
-            if (data.GetPlayer().getUniqueId().equals(trailData.GetPlayer().getUniqueId()))
-                this.trailData.remove(data);
-        this.trailData.add(trailData);
-    }
-
-    public List<TrailData> getTrailData() {
-        return trailData;
-    }
 }

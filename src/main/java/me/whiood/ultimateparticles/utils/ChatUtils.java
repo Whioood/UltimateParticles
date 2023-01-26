@@ -18,7 +18,7 @@ public class ChatUtils {
     }
 
     public static void NoPermMsg(Player p){
-        p.sendMessage(Color("&cYou do not have the required permission."));
+        p.sendMessage(Color("&cYou do not have the required permission. &6&l/Buy"));
     }
 
 
