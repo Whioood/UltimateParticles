@@ -1,0 +1,74 @@
+# This is the message that gets sent after a user does not have the trails.use or trails.use.<PARTICLE> permission.
+no-perm-msg: "&cYou do not have the required permission."
+
+# Here you can set the display name and lore of the gui items!
+disable-particles:
+  name: "&cDisable Particles"
+  lore:
+    - "&7"
+    - "&cClick to disable particles!"
+totem-particles:
+  name: "&aTotem Particles"
+  lore:
+    - "&7"
+    - "&cClick to select this particle!"
+witch-particles:
+  name: "&aWitch Particles"
+  lore:
+    - "&7"
+    - "&cClick to select this particle!"
+crit-particles:
+  name: "&aCrit Particles"
+  lore:
+    - "&7"
+    - "&cClick to select this particle!"
+soul-fire-particles:
+  name: "&aSoul-Fire Particles"
+  lore:
+    - "&7"
+    - "&cClick to select this particle!"
+squid-particles:
+  name: "&aSquid Particles"
+  lore:
+    - "&7"
+    - "&cClick to select this particle!"
+glow-squid-particles:
+  name: "&aGlow Squid Particles"
+  lore:
+    - "&7"
+    - "&cClick to select this particle!"
+snow-flake-particles:
+  name: "&aSnow Flake Particles"
+  lore:
+    - "&7"
+    - "&cClick to select this particle!"
+flame-particles:
+  name: "&aFlame Particles"
+  lore:
+    - "&7"
+    - "&cClick to select this particle!"
+sculk-particles:
+  name: "&aSculk Particles"
+  lore:
+    - "&7"
+    - "&cClick to select this particle!"
+portal-particles:
+  name: "&aPortal Particles"
+  lore:
+    - "&7"
+    - "&cClick to select this particle!"
+nautilus-particles:
+  name: "&aNautilus Particles"
+  lore:
+    - "&7"
+    - "&cClick to select this particle!"
+cloud-particles:
+  name: "&aCloud Particles"
+  lore:
+    - "&7"
+    - "&cClick to select this particle!"
+composter-particles:
+  name: "&aComposter Particles"
+  lore:
+    - "&7"
+    - "&cClick to select this particle!"

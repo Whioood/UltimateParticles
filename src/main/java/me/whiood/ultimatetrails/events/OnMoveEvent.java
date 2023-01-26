@@ -1,6 +1,6 @@
-package me.whiood.ultimateparticles.events;
+package me.whiood.ultimatetrails.events;
 
-import me.whiood.ultimateparticles.utils.TrailManager;
+import me.whiood.ultimatetrails.utils.TrailManager;
 import org.bukkit.Particle;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

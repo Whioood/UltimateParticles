@@ -1,15 +1,14 @@
-package me.whiood.ultimateparticles.events;
+package me.whiood.ultimatetrails.events;
 
-import me.whiood.ultimateparticles.utils.ChatUtils;
-import me.whiood.ultimateparticles.utils.GuiUtils;
-import me.whiood.ultimateparticles.utils.TrailManager;
+import me.whiood.ultimatetrails.utils.ChatUtils;
+import me.whiood.ultimatetrails.utils.GuiUtils;
+import me.whiood.ultimatetrails.utils.TrailManager;
 import org.bukkit.Particle;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 
-import java.util.Objects;
 import java.util.UUID;
 
 public class OnClickEvent implements Listener {
@@ -27,7 +26,7 @@ public class OnClickEvent implements Listener {
                 TrailManager.removeTrail(pUUID);
             } else if (!(particle == null))
                 if (e.getWhoClicked().hasPermission("trails.use." + particle.toString().toLowerCase())){
-                    e.getWhoClicked().sendMessage(ChatUtils.Color("&aSuccesfully selected trail " + particle.toString()));
+                    e.getWhoClicked().sendMessage(ChatUtils.Color("&aSuccesfully selected trail"));
                     TrailManager.setTrail(pUUID, particle);
                 } else ChatUtils.NoPermMsg((Player) e.getWhoClicked());
 

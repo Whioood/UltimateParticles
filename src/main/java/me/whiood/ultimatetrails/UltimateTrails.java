@@ -1,28 +1,22 @@
-package me.whiood.ultimateparticles;
+package me.whiood.ultimatetrails;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import me.whiood.ultimateparticles.commands.TrailCommand;
-import me.whiood.ultimateparticles.events.OnClickEvent;
-import me.whiood.ultimateparticles.events.OnMoveEvent;
-import org.bukkit.OfflinePlayer;
+import me.whiood.ultimatetrails.commands.TrailCommand;
+import me.whiood.ultimatetrails.events.OnClickEvent;
+import me.whiood.ultimatetrails.events.OnMoveEvent;
 import org.bukkit.Particle;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.Writer;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 
-public final class UltimateParticles extends JavaPlugin {
-    public static UltimateParticles instance;
-
+public final class UltimateTrails extends JavaPlugin {
+    public static UltimateTrails instance;
     public HashMap<UUID, Particle> trailMap = new HashMap<>();
 
     @Override
@@ -34,6 +28,12 @@ public final class UltimateParticles extends JavaPlugin {
         instance = this;
 
         loadData();
+
+        getConfig().options().copyDefaults(true);
+        saveConfig();
+
+
+
     }
 
     @Override
@@ -45,12 +45,15 @@ public final class UltimateParticles extends JavaPlugin {
         }
     }
 
+
+
     @SuppressWarnings("ALL")
     public void saveData() throws IOException {
         Gson gson = new Gson();
-        File file = new File(getDataFolder() + "/traildata.json");
-        file.mkdir();
-        file.createNewFile();
+        File file = new File(getDataFolder(), "traildata.json");
+        if (!file.exists()) {
+            file.createNewFile();
+        }
         Writer writer = new FileWriter(file, false);
         gson.toJson(trailMap, writer);
         writer.flush();

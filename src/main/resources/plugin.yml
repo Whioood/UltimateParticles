@@ -1,6 +1,6 @@
-name: UltimateParticles
-version: 1.0.0
-main: me.whiood.ultimateparticles.UltimateParticles
+name: UltimateTrails
+version: 1.1
+main: me.whiood.ultimatetrails.UltimateTrails
 api-version: 1.19
 authors: [ Whiood ]
 description: Plugin for walking particles.

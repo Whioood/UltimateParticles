@@ -1,6 +1,6 @@
-package me.whiood.ultimateparticles.utils;
+package me.whiood.ultimatetrails.utils;
 
-import me.whiood.ultimateparticles.UltimateParticles;
+import me.whiood.ultimatetrails.UltimateTrails;
 import org.bukkit.Particle;
 
 import java.util.UUID;
@@ -9,15 +9,15 @@ public class TrailManager {
 
     public static void setTrail(UUID playerUUID, Particle trail){
         removeTrail(playerUUID);
-        UltimateParticles.instance.trailMap.put(playerUUID, trail);
+        UltimateTrails.instance.trailMap.put(playerUUID, trail);
     }
 
     public static Particle getTrail(UUID playerUUID){
-        return UltimateParticles.instance.trailMap.get(playerUUID);
+        return UltimateTrails.instance.trailMap.get(playerUUID);
     }
 
     public static void removeTrail(UUID playerUUID) {
-        UltimateParticles.instance.trailMap.remove(playerUUID);
+        UltimateTrails.instance.trailMap.remove(playerUUID);
     }
 
 }
